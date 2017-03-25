@@ -11,7 +11,7 @@ The solution consists basically in verifying wheter the equation *`ak+bt=c`* has
 <br>
 If the *gcd(a,b)* does divide *c*, considering that *`c < 10001`* and that *`a > 0`*, then the value of *`-1 < c-ak < 10001`*, so we can iterate through *k* and it will do at most *c/a+1* operations (10001 operations max). For each iteration we should check if the remaining from the substraction is a multiple of *b*.
 <br>
-Algoritmo
+<pre>Algorithm</pre>
 <br>
 <pre>
 If <em>c mod gcd(a,b) = 0</em>
