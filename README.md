@@ -24,6 +24,29 @@ Print counter*match," ",towels
 End
 </pre>
 
+## 630C: Lucky Numbers
+This problem is stated <a href="http://codeforces.com/contest/630/problem/C">here</a>.
+<br>
+### Solution
+This solution consists basically in counting the quantity of posible numbers exist with no more than *n* digits and formed by only 7's and 8's. Considering that we only have 2 posibilities per digit, then the quantity of numbers with *l* digits woudl be 2<sup>l</sup>. Since we want **all** the quantities from numbers with digits from *1* to *n*, then we should compute &sum;q(i) with i &in; [1,n].
+<br>
+Therefore, the answer for each *n* is: 2<sup>1</sup> + 2<sup>2</sup>+...+2<sup>n</sup>. We should know that the sum from 2<sup>0</sup> to 2<sup>n</sup> is 2<sup>(n+1)</sup> - 1, then 2<sup>1</sup> + 2<sup>2</sup>+...+2<sup>n</sup> = 2<sup>(n+1)</sup> - 1 - 2<sup>0</sup> = 2<sup>(n+1)</sup> - 2.
+<br>
+A fast way to compute this (it's not really necessary for this problem, though) is **bit shifting**, so we will shift a number *1* *n+1* times and then substract 2. Remember that the maximum number of direct shifts in C++ is 31 because is suported for 32-bit integers. In order to prevent overflow, we should store the answer into a **long long**.
+<br>
+<pre>Algorithm</pre>
+<br>
+<pre>
+q = 1
+If <em>n&lt;32</em>
+  Print 1&lt;&lt;(n+1) - 2
+Else
+  q = q&lt;&lt;31
+  n = n - 31
+  Print 1&lt;&lt;(n+1) - 2
+End
+</pre>
+
 ## 633A: Ebony and Ivory
 
 This problem is stated <a href="https://codeforces.com/contest/633/problem/A">here</a>.
