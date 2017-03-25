@@ -1,7 +1,6 @@
 # Codeforces
 Codeforces problems that I could solve :,'v
 
-
 ## 633A: Ebony and Ivory
 
 This problem is stated [here]("https://codeforces.com/contest/633/problem/A").
