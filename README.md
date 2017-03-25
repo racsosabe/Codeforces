@@ -13,12 +13,14 @@ If the *gcd(a,b)* does divide *c*, considering that *`c < 10001`* and that *`a >
 <br>
 Algoritmo
 <br>
-<blockquote>If <em>c mod gcd(a,b) = 0</em> </blockquote>
-<blockquote><blockquote>For <em>k=0</em> to <em>k=c/a</em></blockquote></blockquote>
-<blockquote><blockquote><blockquote>If <em>(c-ak) mod b = 0</em></blockquote></blockquote></blockquote>
-<blockquote><blockquote><blockquote><blockquote>Print <em>"Yes"</em></blockquote></blockquote></blockquote></blockquote>
-<blockquote><blockquote><blockquote><blockquote><em>End</em></blockquote></blockquote></blockquote></blockquote>
-<blockquote><blockquote>Print "No"</blockquote></blockquote>
-<blockquote>Else</blockquote>
-<blockquote><blockquote>Print "No"</blockquote></blockquote>
-<blockquote>End</blockquote>
+<pre>
+If <em>c mod gcd(a,b) = 0</em>
+  For <em>k=0</em> to <em>k=c/a</em>
+    If <em>(c-ak) mod b = 0</em>
+      Print <em>"Yes"</em>
+      <em>End</em>
+  Print "No"
+Else
+  Print "No"
+End
+</pre>
